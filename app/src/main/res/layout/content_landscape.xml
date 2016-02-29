@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools" android:padding="10dp">
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Date of Activity*  "
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:paddingRight="50dp"
+        android:id="@+id/textdoa"/>
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_width="250dp"
+        android:id="@+id/activitydateswati"
+        android:background="@drawable/edittextstyle"
+        android:layout_toRightOf="@+id/textdoa"
+        android:layout_alignBottom="@+id/textdoa" />
+    <ImageView android:layout_height="40dp"
+        android:layout_width="35dp"
+        android:src="@drawable/calendar1"
+        android:id="@+id/calimg"
+        android:clickable="true"
+        android:onClick="popupimage"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/activitydateswati"
+        android:layout_toEndOf="@+id/activitydateswati" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Duration*  "
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_below="@+id/calimg"
+        android:layout_alignLeft="@+id/textdoa"
+        android:layout_alignStart="@+id/textdoa"
+        android:id="@+id/duration"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fr"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:id="@+id/textView2"
+        android:layout_alignTop="@+id/duration"
+        android:layout_alignLeft="@+id/activitydateswati"
+        android:layout_alignStart="@+id/activitydateswati" />
+    <Spinner
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/fromhour"
+        android:paddingLeft="5dp"
+        android:background="@drawable/edittextstyle"
+        android:layout_alignTop="@+id/textfromhrs"
+        android:layout_toLeftOf="@+id/textfromhrs"
+        android:layout_toStartOf="@+id/textfromhrs"
+        android:layout_alignBottom="@+id/textfromhrs" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hrs"
+        android:id="@+id/textfromhrs"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/from_minutes"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5" />
+
+    <Spinner
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/from_minutes"
+        tools:ignore="RtlCompat"
+        android:background="@drawable/edittextstyle"
+        android:layout_alignTop="@+id/textfrommins"
+        android:layout_toLeftOf="@+id/textfrommins"
+        android:layout_toStartOf="@+id/textfrommins"
+        android:layout_alignBottom="@+id/textfrommins" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="mins"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:id="@+id/textfrommins"
+        android:layout_below="@+id/calimg"
+        android:layout_alignRight="@+id/calimg"
+        android:layout_alignEnd="@+id/calimg" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:gravity="top"
+        android:text="To"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="27dp"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:id="@+id/textView4"
+        android:layout_toLeftOf="@+id/tohour"
+        android:layout_toStartOf="@+id/tohour" />
+    <Spinner
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tohour"
+        android:background="@drawable/edittextstyle"
+        android:layout_alignLeft="@+id/fromhour"
+        android:layout_alignStart="@+id/fromhour"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignTop="@+id/textView5" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="hrs"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:id="@+id/textView5"
+        android:layout_marginRight="41dp"
+        android:layout_marginEnd="41dp"
+        android:layout_above="@+id/textView6"
+        android:layout_toLeftOf="@+id/tominutes"
+        android:layout_toStartOf="@+id/tominutes" />
+
+    <Spinner
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tominutes"
+        android:background="@drawable/edittextstyle"
+        android:layout_alignTop="@+id/textView5"
+        android:layout_toLeftOf="@+id/textView11"
+        android:layout_toStartOf="@+id/textView11"
+        android:layout_alignBottom="@+id/textView5" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="mins"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/tominutes"
+        android:layout_alignLeft="@+id/textfrommins"
+        android:layout_alignStart="@+id/textfrommins"
+        android:id="@+id/textView11" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hours Invested"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/textView6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView8" />
+
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Time"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:id="@+id/textView6"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/textView4"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Brief Description"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:paddingTop="20dp"
+        android:layout_gravity="left"
+        android:id="@+id/textView15"
+        android:layout_weight="30"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_height="200dp"
+        android:layout_width="270dp"
+        android:inputType="textMultiLine"
+        android:background="@drawable/edittextstyle"
+        android:gravity="top"
+        android:layout_weight="40"
+        android:hint="(Provide description within 50 words)"
+        android:id="@+id/editText2"
+        android:layout_alignTop="@+id/textView15"
+        android:layout_alignRight="@+id/textView11"
+        android:layout_alignEnd="@+id/textView11"
+        android:layout_toRightOf="@+id/textdoa"
+        android:layout_toEndOf="@+id/textdoa"
+        android:layout_above="@+id/linearLayout" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:id="@+id/linearLayout3" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No&apos;s Participated* "
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:id="@+id/textView9"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_toRightOf="@+id/calimg"
+        android:layout_marginLeft="63dp"
+        android:layout_marginStart="63dp"
+        android:layout_above="@+id/textfrommins"
+        android:layout_toLeftOf="@+id/selectactivitysector"
+        android:layout_toStartOf="@+id/selectactivitysector" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:hint="Number participated"
+        android:inputType="number"
+        android:background="@drawable/edittextstyle"
+        android:id="@+id/editText"
+        android:layout_alignTop="@+id/activitydateswati"
+        android:layout_toRightOf="@+id/textView9"
+        android:layout_alignRight="@+id/selectactivitysector"
+        android:layout_alignEnd="@+id/selectactivitysector" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Region"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:id="@+id/textView14"
+        android:layout_below="@+id/textView9"
+        android:layout_alignLeft="@+id/textView9"
+        android:layout_alignStart="@+id/textView9" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="SR"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:id="@+id/textView12"
+        android:layout_below="@+id/textView9"
+        android:layout_toRightOf="@+id/textView9"
+        android:layout_toEndOf="@+id/textView9" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Activity Selector"
+        android:paddingTop="20dp"
+        android:gravity="top"
+        android:paddingRight="5dp"
+        android:id="@+id/textsas"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_alignBottom="@+id/selectactivitysector"
+        android:layout_alignLeft="@+id/textView14"
+        android:layout_alignStart="@+id/textView14" />
+    <Spinner
+        android:layout_width="250dp"
+        android:paddingLeft="5dp"
+        android:layout_height="40dp"
+        android:background="@drawable/edittextstyle"
+        android:id="@+id/selectactivitysector"
+        android:layout_alignTop="@+id/textView11"
+        android:layout_alignRight="@+id/linearLayout"
+        android:layout_alignEnd="@+id/linearLayout" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity"
+        android:id="@+id/textselectactivity"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:paddingTop="30dp"
+        android:layout_weight="30"
+        android:layout_alignTop="@+id/textView6"
+        android:layout_alignLeft="@+id/textsas"
+        android:layout_alignStart="@+id/textsas" />
+    <Spinner
+        android:paddingRight="70dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="18"
+        android:id="@+id/selectactivity"
+        android:background="@drawable/edittextstyle"
+        android:layout_below="@+id/textView6"
+        android:layout_alignLeft="@+id/selectactivitysector"
+        android:layout_alignStart="@+id/selectactivitysector" />
+
+    <ImageView android:layout_height="40dp"
+        android:layout_width="35dp"
+        android:src="@drawable/camera"
+        android:id="@+id/camera"
+        android:clickable="true"
+        android:layout_below="@+id/textView15"
+        android:onClick="oncamClick"
+
+        android:layout_alignLeft="@+id/textselectactivity"
+        android:layout_alignStart="@+id/textselectactivity" />
+
+    <LinearLayout android:paddingTop="20dp"
+        android:paddingLeft="60dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/linearLayout3"
+        android:layout_toEndOf="@+id/linearLayout3">
+        <Button android:text="Save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:id="@+id/save"/>
+        <android.support.v4.widget.Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"/>
+
+
+        <Button android:text="NEXT"
+            android:layout_weight="25"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/next"
+            android:onClick="onsaveClick" />
+        <android.support.v4.widget.Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"/>
+
+
+        <Button android:text="Cancel"
+            android:layout_weight="25"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/cancel_action"/>
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

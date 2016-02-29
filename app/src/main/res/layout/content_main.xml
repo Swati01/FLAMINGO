@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.advantal.flames.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:padding="10dp">
+
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Date of Activity*  "
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:paddingRight="50dp"
+            android:id="@+id/doa"/>
+        <EditText
+            android:layout_height="wrap_content"
+android:layout_marginLeft="10dp"
+            android:layout_width="280dp"
+            android:textColor="#000000"
+            android:id="@+id/activitydateswati"
+            android:background="@drawable/edittextstyle"
+            android:layout_toRightOf="@+id/doa"
+            android:layout_alignBottom="@+id/doa"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="false"
+            android:visibility="visible"
+            android:inputType="date"
+            tools:ignore="RtlCompat" />
+
+        <ImageView android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:src="@drawable/calendar1"
+            android:id="@+id/calimg"
+            android:clickable="true"
+            android:onClick="popupimage"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/activitydateswati"
+            android:layout_toEndOf="@+id/activitydateswati" />
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Duration*  "
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_below="@+id/calimg"
+            android:layout_alignLeft="@+id/doa"
+            android:layout_alignStart="@+id/doa"
+            android:id="@+id/duration"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frm"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:id="@+id/textView2"
+            android:layout_alignTop="@+id/duration"
+            android:layout_toRightOf="@+id/doa"
+            android:layout_toEndOf="@+id/doa" />
+
+        <Spinner
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/fromhour"
+            android:background="@drawable/edittextstyle"
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2"
+            android:layout_alignBottom="@+id/textfromhrs"
+            android:layout_below="@+id/calimg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hrs"
+            android:id="@+id/textfromhrs"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_alignTop="@+id/textView2"
+            android:layout_toRightOf="@+id/fromhour"
+            android:layout_toEndOf="@+id/fromhour" />
+
+        <Spinner
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/from_minutes"
+            android:background="@drawable/edittextstyle"
+            android:layout_toEndOf="@+id/textfromhrs"
+            android:layout_alignBottom="@+id/textfromhrs"
+            android:layout_alignTop="@+id/textfromhrs"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="mins"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:id="@+id/textfrommins"
+            android:layout_above="@+id/textView4"
+            android:layout_toRightOf="@+id/from_minutes"
+            android:layout_toEndOf="@+id/from_minutes"
+            android:layout_marginLeft="31dp"
+            android:layout_marginStart="31dp" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:gravity="left"
+            android:text="To"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_below="@+id/textView2"
+            android:layout_alignRight="@+id/textView2"
+            android:layout_alignEnd="@+id/textView2"
+            android:layout_marginTop="27dp"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2"
+            android:id="@+id/textView4" />
+        <Spinner
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tohour"
+            android:background="@drawable/edittextstyle"
+            android:layout_alignTop="@+id/textView4"
+            android:layout_toLeftOf="@+id/textfromhrs"
+            android:layout_toStartOf="@+id/textfromhrs"
+            android:layout_alignBottom="@+id/textView4" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="hrs"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_alignTop="@+id/tohour"
+            android:layout_alignLeft="@+id/textfromhrs"
+            android:layout_alignStart="@+id/textfromhrs"
+            android:id="@+id/textView5" />
+
+        <Spinner
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tominutes"
+            android:background="@drawable/edittextstyle"
+            android:layout_alignTop="@+id/textView5"
+            android:layout_alignLeft="@+id/from_minutes"
+            android:layout_alignStart="@+id/from_minutes"
+            android:layout_alignBottom="@+id/textView5" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="mins"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_alignTop="@+id/tominutes"
+            android:layout_alignLeft="@+id/textfrommins"
+            android:layout_alignStart="@+id/textfrommins"
+            android:id="@+id/textView11" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hours Invested"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_alignTop="@+id/textView6"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textView8" />
+
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Time"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:id="@+id/textView6"
+            android:layout_marginTop="29dp"
+            android:layout_below="@+id/textView4"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignStart="@+id/textView4" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No&apos;s Participated* "
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_marginTop="38dp"
+            android:id="@+id/textView9"
+            android:layout_below="@+id/textView8"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="270dp"
+            android:hint="Number participated"
+            android:inputType="number"
+            android:background="@drawable/edittextstyle"
+            android:id="@+id/editText"
+            android:layout_alignTop="@+id/textView9"
+            android:layout_alignLeft="@+id/activitydateswati"
+            android:layout_alignStart="@+id/activitydateswati"
+            android:layout_alignRight="@+id/calimg"
+            android:layout_alignEnd="@+id/calimg" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Region"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_alignTop="@+id/textView12"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textView14" />
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="SR"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_marginTop="27dp"
+            android:id="@+id/textView12"
+            android:layout_below="@+id/editText"
+            android:layout_alignLeft="@+id/editText"
+            android:layout_alignStart="@+id/editText" />
+
+<LinearLayout
+    android:paddingTop="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_below="@+id/textView14"
+    android:layout_toRightOf="@+id/calview"
+    android:layout_toEndOf="@+id/calview"
+    android:weightSum="1"
+    android:id="@+id/linearLayout5">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activity Selector"
+            android:id="@+id/textsas"
+            android:gravity="top"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_alignBottom="@+id/selectactivitysector"/>
+
+<android.support.v4.widget.Space
+    android:layout_width="60dp"
+    android:layout_height="wrap_content" />
+
+        <Spinner
+            android:layout_width="270dp"
+            android:layout_height="53dp"
+            android:id="@+id/selectactivitysector"
+            android:background="@drawable/edittextstyle"
+            android:layout_above="@+id/linearLayout4"
+            android:layout_weight="0.57" />
+</LinearLayout>
+
+    <LinearLayout
+        android:paddingTop="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    android:id="@+id/linearLayout4"
+        android:layout_below="@+id/linearLayout5"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+    <TextView
+        android:layout_width="142dp"
+        android:layout_height="33dp"
+        android:text="Activity"
+        android:id="@+id/textselectactivity"
+        android:layout_gravity="top"
+        android:gravity="top"
+        android:textColor="#000000"
+        android:textSize="20sp"
+         />
+        <android.support.v4.widget.Space
+            android:layout_width="60dp"
+            android:layout_height="wrap_content" />
+
+
+        <Spinner
+        android:paddingLeft="0dp"
+        android:layout_width="125dp"
+        android:layout_height="53dp"
+        android:background="@drawable/edittextstyle"
+        android:id="@+id/selectactivity"
+        android:layout_column="9"
+        android:layout_weight="0.84" />
+
+
+</LinearLayout>
+
+
+    <LinearLayout
+        android:paddingTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:id="@+id/linearLayout2"
+        android:layout_below="@+id/linearLayout4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brief Description"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:paddingTop="20dp"
+                android:layout_gravity="left"
+                android:id="@+id/textView15"
+                android:layout_weight="30"
+                android:layout_alignTop="@+id/editText2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_height="200dp"
+            android:layout_width="250dp"
+            android:inputType="textMultiLine"
+            android:background="@drawable/edittextstyle"
+            android:gravity="top"
+            android:layout_weight="60.33"
+            android:hint="(Provide description within 50 words)"
+            android:id="@+id/editText2"
+            android:layout_above="@+id/linearLayout"
+            />
+
+        <android.support.v4.widget.Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"/>
+
+    </LinearLayout>
+        <LinearLayout android:paddingTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" android:weightSum="100"
+            android:id="@+id/linearLayout"
+            android:layout_below="@+id/camera"
+            android:layout_toRightOf="@+id/calview"
+            android:layout_toEndOf="@+id/calview">
+            <Button android:text="Save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="25"
+                android:id="@+id/save"/>
+            <android.support.v4.widget.Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"/>
+
+
+            <Button android:text="Next"
+                android:layout_weight="25"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/next"
+                android:onClick="onsaveClick" />
+            <android.support.v4.widget.Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"/>
+
+
+            <Button android:text="Cancel"
+                android:layout_weight="25"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/cancel_action"/>
+
+        </LinearLayout>
+
+        <ImageView android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:src="@drawable/camera"
+            android:id="@+id/camera"
+            android:clickable="true"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_alignLeft="@+id/textView12"
+            android:layout_alignStart="@+id/textView12"
+            android:onClick="oncamClick" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Date"
+        android:id="@+id/sonal"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="visible"
+        />
+    </RelativeLayout>
+
+
+
+
+
+
+
